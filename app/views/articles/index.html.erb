@@ -1,0 +1,9 @@
+<%= render 'navbar' %>
+<div class="row">
+    <div class="col-sm-8 col-sm-offset-2">
+        <% @articles.each do |a|%>
+        <h3><%= link_to a.title, article_path(a) %></h3>
+        <p><%= a.content %></p>
+        <% end %>
+    </div>
+</div>

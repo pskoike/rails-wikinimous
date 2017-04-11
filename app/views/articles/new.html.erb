@@ -1,0 +1,13 @@
+<%= render 'navbar' %>
+<div class="row">
+    <div class="col-sm-8 col-sm-offset-2">
+        <%= form_for(@article) do |a| %>
+        <%= a.label :title %>
+        <%= a.text_field :title, class: 'form-control' %>
+        <%= a.label :content %>
+        <%= a.text_area :content, class: 'form-control' %>
+        <br>
+        <%= a.submit class: 'btn btn-success' %>
+        <% end %>
+    </div>
+</div>

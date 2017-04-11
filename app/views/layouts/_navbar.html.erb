@@ -1,7 +1,12 @@
 <nav class="navbar navbar-default navbar-fixed-top">
   <div class="container">
     <p class="navbar-text navbar-left">
+      <% if current_user %>
       <%= link_to 'Wikinimous', articles_path%>
+      <% else %>
+      Wikinimous
+      <% end %>
+
     <p class="navbar-text navbar-right"><%= link_to 'New Article', new_article_path if current_user %>
       |
       <% if current_user %>
